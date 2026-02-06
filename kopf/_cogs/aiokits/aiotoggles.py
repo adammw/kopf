@@ -1,3 +1,7 @@
+# Required for compatibility with asyncio instrumentation. Postpones evaluation of
+# PEP 604 unions (|) to avoid issues with monkeypatched asyncio types at import time.
+from __future__ import annotations
+
 import asyncio
 from collections.abc import Callable, Collection, Iterable, Iterator
 
